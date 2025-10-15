@@ -1,10 +1,12 @@
-name: CI/CD Deploy using Reusable Workflow
+name: Deploy using reusable workflow
+
 on:
   push:
     branches: [ "main" ]
+
 jobs:
-  use_platform_workflow:
-    uses: deepankar-personal/platform-workflows/.github/workflows/build-and-deploy.yml@main
+  use_reusable:
+    uses: DevOps-Deepankar/platform-workflows/.github/workflows/build-and-deploy.yml@main
     with:
       resource_group: rg-product-catalog
       aks_name: aks-product-catalog
