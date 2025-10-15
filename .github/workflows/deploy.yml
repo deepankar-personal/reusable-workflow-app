@@ -3,7 +3,6 @@ name: Deploy using reusable workflow
 on:
   push:
     branches: [ "main" ]
-
 jobs:
   use_reusable:
     uses: deepankar-personal/platform-workflows-demo/.github/workflows/build-and-deploy.yml@main
