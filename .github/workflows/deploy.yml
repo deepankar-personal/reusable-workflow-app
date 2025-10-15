@@ -1,5 +1,4 @@
 name: CI/CD Deploy using Reusable Workflow
-
 on:
   push:
     branches: [ "main" ]
