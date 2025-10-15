@@ -3,6 +3,7 @@ name: CI/CD Deploy using Reusable Workflow
 on:
   push:
     branches: [ "main" ]
+    
 jobs:
   use_platform_workflow:
     uses: deepankar-personal/platform-workflows/.github/workflows/build-and-deploy.yml@main
