@@ -6,7 +6,7 @@ on:
 
 jobs:
   use_reusable:
-    uses: deepankar-personal/platform-workflows/.github/workflows/build-and-deploy.yml@main
+    uses: deepankar-personal/platform-workflows-demo/.github/workflows/build-and-deploy.yml@main
     with:
       resource_group: rg-product-catalog
       aks_name: aks-product-catalog
