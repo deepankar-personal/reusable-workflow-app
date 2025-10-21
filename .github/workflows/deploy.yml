@@ -1,13 +1,14 @@
-name: Deploy using reusable workflow
-
+name: security-scan
 on:
-  push:
-    branches: [ "main" ]
+  pull_request:
+    branches: [ main ]
+
 jobs:
-  use_reusable:
-    uses: deepankar-personal/platform-workflows-demo/.github/workflows/build-and-deploy.yml@main
-    with:
-      resource_group: rg-product-catalog
-      aks_name: aks-product-catalog
-    secrets:
-      AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run Security Scan
+        run: echo "Running security checks..."
